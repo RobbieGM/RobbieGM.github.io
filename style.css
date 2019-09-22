@@ -92,6 +92,7 @@ a:active {
 
 #other-content {
   margin: 0 auto;
+  padding: 10px;
   max-width: 1000px;
   text-align: center;
 }
@@ -121,7 +122,6 @@ a:active {
 #project-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
 }
 
 .project {
