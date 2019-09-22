@@ -2,14 +2,15 @@
   --light-gray: #f5f5f5;
   --gray: #e4e4e4;
   --accent-dark: #00b6b3;
+  --sans: 'Lexend Deca', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
 }
 
 html,
 body {
   margin: 0;
   color: rgba(0, 0, 0, 0.8);
-  font-family: 'Lexend Deca', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--sans);
 }
 
 * {
@@ -22,7 +23,6 @@ h2,
 h3,
 h4 {
   font-family: 'Roboto Mono', Consolas, 'Courier New', Courier, monospace;
-  margin-top: 0;
 }
 
 a {
@@ -40,6 +40,10 @@ a:active {
   flex-wrap: wrap;
   background: var(--light-gray);
   padding: 20px;
+}
+
+#profile-and-contact-info h3 {
+  margin-top: 0;
 }
 
 #profile-and-contact-info > * {
@@ -68,7 +72,7 @@ a:active {
   flex-grow: 1;
 }
 
-a.chip {
+.chip {
   color: inherit;
   display: inline-flex;
   align-items: center;
@@ -76,10 +80,76 @@ a.chip {
   background: var(--gray);
   padding: 5px 10px;
   margin: 0 10px 10px 0;
+  font-family: var(--sans);
+  font-weight: normal;
 }
 
-a.chip img {
+.chip img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+}
+
+#other-content {
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+#skill-icon-container {
+  display: grid;
+  grid-template-columns: repeat(6, 80px);
+  grid-auto-rows: 1fr;
+  justify-items: center;
+  justify-content: center;
+  gap: 30px;
+  grid-gap: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  #skill-icon-container {
+    grid-template-columns: repeat(auto-fit, 80px);
+  }
+}
+
+#skills img {
+  max-width: 80px;
+  height: 80px;
+  /* works as long as no image is wider than it is tall */
+}
+
+#project-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.project {
+  flex: 1;
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  background: var(--light-gray);
+  margin: 10px;
+  border-radius: 5px;
+  text-align: left;
+  padding: 15px;
+}
+
+.project > div:first-child {
+  flex-grow: 1;
+}
+
+.project h4 {
+  margin-top: 0;
+}
+
+.project .chip {
+  margin-bottom: 0;
+}
+
+#experience :not(h2) {
+  text-align: left;
 }
