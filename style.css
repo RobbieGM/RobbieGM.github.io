@@ -61,15 +61,6 @@ a:active {
   margin-bottom: 0;
 }
 
-#profile-picture {
-  float: left;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
 #contact-info {
   flex-grow: 1;
 }
