@@ -1,226 +1,228 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link href='https://fonts.googleapis.com/css?family=Lexend+Deca|Roboto+Mono&display=swap' rel='stylesheet' />
-    <link href='style.css' rel='stylesheet' />
-    <script src='main.js' defer></script>
-    <title>Robert Moore: résumé</title>
-  </head>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width' />
+  <link href='https://fonts.googleapis.com/css?family=Lexend+Deca|Roboto+Mono&display=swap' rel='stylesheet' />
+  <link href='style.css' rel='stylesheet' />
+  <script src='main.js' defer></script>
+  <title>Robert Moore: résumé</title>
+</head>
 
-  <body>
-    <div id='profile-and-contact-info'>
-      <section id='profile'>
-        <img id='profile-picture' src='me.jpg' alt='Profile picture' />
-        <h3>Robert Moore</h3>
-        <p>Lead programmer for my high school <a href='https://www.firstinspires.org/robotics/frc'>FIRST robotics</a>
-          team, <a href='https://www.chelsearobotics.org/'>team 1502</a>.
-          There I undertook projects such as <a
-            href='https://github.com/frcteam1502/vscode-workspace-2019/blob/master/src/main/java/org/usfirst/frc/team1502/robot/commands/GuidedDrivingCommands.java'>machine
-            vision</a>, autonomous driving, and teaching new programmers. I have been programming for <span
-            id='years-experience'>5</span> years. When I'm not in school or robotics, I do full-stack web development or
-          compose music in my free time. My favorite technologies currently are Node, Express, React or Vue, Redux,
-          Heroku, and Git. I'm always trying to learn the latest and greatest technologies and techniques and integrate
-          them into my projects, such as GraphQL, code testing, CSS grid, and React hooks.</p>
-      </section>
-      <section id='contact-info'>
-        <h3>Contact Info</h3>
-        <p>
-          <a class='chip' href='mailto:rgm020103@gmail.com' target='_blank'><img src='icons/mail.svg'
-              alt='Email'>rgm020103@gmail.com</a>
-          <a class='chip' href='mailto:1moorer@chelsea.k12.mi.us' target='_blank'><img src='icons/mail.svg'
-              alt='Email'>1moorer@chelsea.k12.mi.us</a>
-          <a class='chip' href='sms:1-734-433-8956' target='_blank'><img src='icons/phone.svg'
-              alt='Text'>734-433-8956</a>
-          <a class='chip' href='https://github.com/RobbieGM' target='_blank'><img src='icons/github.svg'
-              alt='GitHub'>RobbieGM</a>
-          <a class='chip' href='https://stackoverflow.com/users/4959049/robert-moore' target='_blank'><img
-              src='icons/stackoverflow.png' />Robert Moore</a>
-        </p>
-      </section>
-    </div>
-    <div id='other-content'>
-      <div id='skills'>
-        <h2>Skills</h2>
-        <div id='skill-icon-container'>
-          <div><img src='./icons/skills/node.png' />Node</div>
-          <div><img src='./icons/skills/vue.png' alt='Vue'>Vue</div>
-          <div><img src='./icons/skills/react.svg' alt='React'>React</div>
-          <div><img src='./icons/skills/redux.svg' alt='Redux'>Redux</div>
-          <div><img src='./icons/skills/express.jpg' alt='Express'>Express</div>
-          <div><img src='./icons/skills/git.png' alt='Git'>Git</div>
-          <div><img src='./icons/skills/heroku.svg' alt='Heroku'>Heroku</div>
-          <div><img src='./icons/skills/html.png' alt='HTML'>HTML</div>
-          <div><img src='./icons/skills/css.png' alt='CSS'>CSS</div>
-          <div><img src='./icons/skills/js.png' alt='JS'>JavaScript</div>
-          <div><img src='./icons/skills/typescript.png' alt='TypeScript'>TypeScript</div>
-          <div><img src='./icons/skills/java.png' alt='Java'>Java</div>
-        </div>
-      </div>
-      <div id='projects'>
-        <h2>Projects <span style='opacity: 0.5'>(newest first)</span></h2>
-        <div id='project-container'>
-          <div class='project'>
-            <div>
-              <h4>(Another project)</h4>
-              <p>Since I'm working on this one for a client, I'm going to say as little as possible even though I'm not technically under a NDA. What I will say is that in this project I plan on using Heroku, React, Node, and pretty much the same technologies I used in Ginger except I plan on using REST APIs instead of GraphQL due to its poor compatiblility and DX with TypeScript. I also am looking to give TailwindCSS and Next.js a try in this project.</p>
-            </div>
-            <div>
-              <span class='chip'>
-                <img src='./icons/coffee.svg' />In Development
-              </span>
-            </div>
-          </div>
-          <div class='project'>
-            <div>
-              <h4>Ginger</h4>
-              <p>The purpose of this project is to learn React, Redux, test-driven development and GraphQL. I have
-                learned React and Redux to a good degree of understanding but not the latter two. This project will be
-                an offline-enabled recipe manager web app that can store your recipes, download others' recipes, share
-                recipes, and browse popular recipes.</p>
-            </div>
-            <div>
-              <span class='chip'>
-                <img src='./icons/pause-circle.svg' />On hold (low priority)
-              </span>
-              <a href='https://github.com/RobbieGM/ginger' target='_blank' class='chip'>
-                <img src='./icons/github.svg' alt='GitHub' />GitHub
-              </a>
-            </div>
-          </div>
-          <div class='project'>
-            <div>
-              <h4>BitterBird</h4>
-              <p>BitterBird analyzes a Twitter user by looking at their last 200 tweets. It graphs data like the number
-                of tweets they post each month, how many likes and retweets each post gets, their favorite hashtags,
-                most mentioned people, and most retweeted people. It also calculates their average sentiment
-                (cheerleading teams often have very positive scores while politicians have more neutral or negative
-                scores) and their writing grade level using the <a
-                  href='https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests'
-                  target='_blank'>Flesch-Kincaid</a> formula. BitterBird uses Node & Express, Vue, TypeScript, and
-                Heroku.</p>
-            </div>
-            <div>
-              <a href='https://bitterbird.herokuapp.com' target='_blank' class='chip'>
-                <img src='./icons/link.svg' alt='Deployed' />Deployed
-              </a>
-              <a href='https://github.com/RobbieGM/bitterbird' target='_blank' class='chip'>
-                <img src='./icons/github.svg' alt='GitHub' />GitHub
-              </a>
-            </div>
-          </div>
-          <div class='project'>
-            <div>
-              <h4>Bukkit Magic Plugin</h4>
-              <p>I like playing games as much as the next person, but after playing lots of plain Minecraft with friends
-                I felt I wanted to add something new to the game. Hence, this project was created. Bukkit Magic Plugin,
-                created with Java and the <a href='https://bukkit.gamepedia.com/Main_Page'>Bukkit</a> framework adds
-                over <a href='https://docs.google.com/document/d/1LxZNiKPuZXgdZUx3fcIo8uUideyNZvQm8BpPrLNUUV0'
-                  target='_blank'>50 magical items</a> to the game and offers a command to set up a "Hunger Games" style
-                game, automating out of much of the setting-up process for each game, including creating a new world,
-                placing players randomly, and giving players basic items.</p>
-            </div>
-            <div>
-              <a href='https://github.com/RobbieGM/bukkit-magic-plugin' target='_blank' class='chip'>
-                <img src='./icons/github.svg' alt='GitHub' />GitHub
-              </a>
-            </div>
-          </div>
-          <div class='project'>
-            <div>
-              <h4>Autonomous camp</h4>
-              <p>A program I made for the Bentley Robo-Raptors' robot at Kettering University during a summer
-                camp. The robot was typically able to, when using sensors, get to within 2 inches of accuracy
-                distance-wise and 1 degree
-                of accuracy angle-wise. The camp had a competition for the robots to see who could get the most points
-                in different ways
-                (e.g., scoring a ball into a hole) and this program won with a score of more than double the score of
-                the second place
-                winner.</p>
-            </div>
-            <div>
-              <a href='https://github.com/RobbieGM/autonomous-camp' target='_blank' class='chip'>
-                <img src='./icons/github.svg' alt='GitHub' />GitHub
-              </a>
-            </div>
-          </div>
-          <div class='project'>
-            <div>
-              <h4>Participate</h4>
-              <p>This frontend-only project solves a real-world classroom problem: teachers often give students
-                participation points when they contribute something to the class. However, they currently keep track of
-                participation on paper, which is wasteful and inconvenient. Enter Participate, the student
-                participation tracker. Once teachers have entered their students' names into the program, it will tell
-                them how many participation points everyone has gotten, and puts students who haven't been called on
-                recently at the top of the list.</p>
-            </div>
-            <div>
-              <a href='https://participate.netlify.com' target='_blank' class='chip'>
-                <img src='./icons/link.svg' alt='Deployed' />Deployed
-              </a>
-            </div>
-          </div>
-          <div class='project'>
-            <div>
-              <h4>Examlet</h4>
-              <p>Examlet allows students and teachers from the same G Suite domain to create and take exams. Students
-                add the teachers that they need to take exams from, and teachers create exams and can view students'
-                results. Exams are all graded automatically and feature cheating detection by showing teachers when
-                students have been switching tabs or apps. Unfortunately, I never got around to finishing the exam
-                statistics part of the webpage and so I left it as what I considered a minimum viable product.</p>
-            </div>
-            <div>
-              <a href='https://github.com/RobbieGM/examlet' target='_blank' class='chip'>
-                <img src='./icons/github.svg' alt='GitHub' />GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id='experience'>
-        <h2>Experience</h2>
-        <div>
-          <h3>Lead programmer at Chelsea Robotics</h3>
-          <ul>
-            <li>Program the robot to drive autonomously
-              <ul>
-                <li>In the 2016 (middle school) and 2018 seasons and this included computer vision</li>
-                <li>The robot uses PID controllers and sensors to keep itself on course</li>
-              </ul>
-            </li>
-            <li>Manage git branches</li>
-            <li>Onboard and teach new programmers</li>
-            <li>Communicate with other parts of the team about project requirements and our requirements for the
-              hardware of the robot</li>
-            <li>Deploy new computer systems donated by the school for the new Chelsea Robotics Center</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Programmer for Chelsea High School</h3>
-          <ul>
-            <li>Made a page containing Google Forms for signing into and out of the counseling office. This was used on
-              a school iPad as a kiosk by the counseling office.</li>
-            <li>Made a widget with help from a programmer from my robotics team that is essentially an interactive
-              manifestation of their <a href='https://www.chelsea.k12.mi.us/about-us/mission-vision'
-                target='_blank'>Portrait of a Graduate</a>. It contains clickable parts of the image which scroll to
-              different parts of a PDF they provided us. Their goal was to create something similar to the <a
-                href='https://www.salineschools.org/sas-vision/sas-compass/' target='_blank'>Saline Portrait of a
-                Graduate widget</a>.</li>
-          </ul>
-        </div>
-      </div>
-      <div id='education'>
-        <h2>Education</h2>
-        <p>Currently I am a student at Chelsea High School, and I will graduate in 2021. I have a 4.0 unweighted GPA and
-          took AP computer science in May 2019, receiving a 5 on the exam. I haven't decided which college I will
-          continue my education at, but I am mainly looking at <a href='https://www.kettering.edu/'
-            target='_blank'>Kettering</a> and <a href='https://umich.edu/' target='_blank'>University of Michigan</a>.
-        </p>
-        </p>
+<body>
+  <div id='profile-and-contact-info'>
+    <section id='profile'>
+      <img id='profile-picture' src='me.jpg' alt='Profile picture' />
+      <h3>Robert Moore</h3>
+      <p>Lead programmer for my high school <a href='https://www.firstinspires.org/robotics/frc'>FIRST robotics</a>
+        team, <a href='https://www.chelsearobotics.org/'>team 1502</a>.
+        There I undertook projects such as <a
+          href='https://github.com/frcteam1502/vscode-workspace-2019/blob/master/src/main/java/org/usfirst/frc/team1502/robot/commands/GuidedDrivingCommands.java'>machine
+          vision</a>, autonomous driving, and teaching new programmers. I have been programming for <span
+          id='years-experience'>5</span> years. When I'm not in school or robotics, I do full-stack web development or
+        compose music in my free time. My favorite technologies currently are Node, Express, React or Vue, Redux,
+        Heroku, and Git. I'm always trying to learn the latest and greatest technologies and techniques and integrate
+        them into my projects, such as GraphQL, code testing, CSS grid, and React hooks.</p>
+    </section>
+    <section id='contact-info'>
+      <h3>Contact Info</h3>
+      <p>
+        <a class='chip' href='mailto:rgm020103@gmail.com' target='_blank'><img src='icons/mail.svg'
+            alt='Email'>rgm020103@gmail.com</a>
+        <a class='chip' href='mailto:1moorer@chelsea.k12.mi.us' target='_blank'><img src='icons/mail.svg'
+            alt='Email'>1moorer@chelsea.k12.mi.us</a>
+        <a class='chip' href='sms:1-734-433-8956' target='_blank'><img src='icons/phone.svg' alt='Text'>734-433-8956</a>
+        <a class='chip' href='https://github.com/RobbieGM' target='_blank'><img src='icons/github.svg'
+            alt='GitHub'>RobbieGM</a>
+        <a class='chip' href='https://stackoverflow.com/users/4959049/robert-moore' target='_blank'><img
+            src='icons/stackoverflow.png' />Robert Moore</a>
+      </p>
+    </section>
+  </div>
+  <div id='other-content'>
+    <div id='skills'>
+      <h2>Skills</h2>
+      <div id='skill-icon-container'>
+        <div><img src='./icons/skills/node.png' />Node</div>
+        <div><img src='./icons/skills/vue.png' alt='Vue'>Vue</div>
+        <div><img src='./icons/skills/react.svg' alt='React'>React</div>
+        <div><img src='./icons/skills/redux.svg' alt='Redux'>Redux</div>
+        <div><img src='./icons/skills/express.jpg' alt='Express'>Express</div>
+        <div><img src='./icons/skills/git.png' alt='Git'>Git</div>
+        <div><img src='./icons/skills/heroku.svg' alt='Heroku'>Heroku</div>
+        <div><img src='./icons/skills/html.png' alt='HTML'>HTML</div>
+        <div><img src='./icons/skills/css.png' alt='CSS'>CSS</div>
+        <div><img src='./icons/skills/js.png' alt='JS'>JavaScript</div>
+        <div><img src='./icons/skills/typescript.png' alt='TypeScript'>TypeScript</div>
+        <div><img src='./icons/skills/java.png' alt='Java'>Java</div>
       </div>
     </div>
-  </body>
+    <div id='projects'>
+      <h2>Projects <span style='opacity: 0.5'>(newest first)</span></h2>
+      <div id='project-container'>
+        <div class='project'>
+          <div>
+            <h4>Fit Society</h4>
+            <p>Since I'm working on this one for a client, I'm going to say as little as possible even though I'm not
+              technically under a NDA. What matters to you, the one I'm sending this résumé to, is that in this project
+              I plan on using Heroku, React, Node, and pretty much the same technologies I used in Ginger except I plan
+              on using REST APIs instead of GraphQL due to its poor compatiblility and DX with TypeScript.</p>
+          </div>
+          <div>
+            <span class='chip'>
+              <img src='./icons/coffee.svg' />In Development
+            </span>
+          </div>
+        </div>
+        <div class='project'>
+          <div>
+            <h4>Ginger</h4>
+            <p>The purpose of this project is to learn React, Redux, test-driven development and GraphQL. I have
+              learned React and Redux to a good degree of understanding but not the latter two. This project will be
+              an offline-enabled recipe manager web app that can store your recipes, download others' recipes, share
+              recipes, and browse popular recipes.</p>
+          </div>
+          <div>
+            <a href='https://ginger.robbiegm.vercel.app' target='_blank' class='chip'>
+              <img src='./icons/link.svg' alt='Deployed' />Deployed
+            </a>
+            <a href='https://github.com/RobbieGM/ginger' target='_blank' class='chip'>
+              <img src='./icons/github.svg' alt='GitHub' />GitHub
+            </a>
+          </div>
+        </div>
+        <div class='project'>
+          <div>
+            <h4>BitterBird</h4>
+            <p>BitterBird analyzes a Twitter user by looking at their last 200 tweets. It graphs data like the number
+              of tweets they post each month, how many likes and retweets each post gets, their favorite hashtags,
+              most mentioned people, and most retweeted people. It also calculates their average sentiment
+              (cheerleading teams often have very positive scores while politicians have more neutral or negative
+              scores) and their writing grade level using the <a
+                href='https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests'
+                target='_blank'>Flesch-Kincaid</a> formula. BitterBird uses Node & Express, Vue, TypeScript, and
+              Heroku.</p>
+          </div>
+          <div>
+            <a href='https://bitterbird.herokuapp.com' target='_blank' class='chip'>
+              <img src='./icons/link.svg' alt='Deployed' />Deployed
+            </a>
+            <a href='https://github.com/RobbieGM/bitterbird' target='_blank' class='chip'>
+              <img src='./icons/github.svg' alt='GitHub' />GitHub
+            </a>
+          </div>
+        </div>
+        <div class='project'>
+          <div>
+            <h4>Bukkit Magic Plugin</h4>
+            <p>I like playing games as much as the next person, but after playing lots of plain Minecraft with friends
+              I felt I wanted to add something new to the game. Hence, this project was created. Bukkit Magic Plugin,
+              created with Java and the <a href='https://bukkit.gamepedia.com/Main_Page'>Bukkit</a> framework adds
+              over <a href='https://docs.google.com/document/d/1LxZNiKPuZXgdZUx3fcIo8uUideyNZvQm8BpPrLNUUV0'
+                target='_blank'>50 magical items</a> to the game and offers a command to set up a "Hunger Games" style
+              game, automating out of much of the setting-up process for each game, including creating a new world,
+              placing players randomly, and giving players basic items.</p>
+          </div>
+          <div>
+            <a href='https://github.com/RobbieGM/bukkit-magic-plugin' target='_blank' class='chip'>
+              <img src='./icons/github.svg' alt='GitHub' />GitHub
+            </a>
+          </div>
+        </div>
+        <div class='project'>
+          <div>
+            <h4>Autonomous camp</h4>
+            <p>A program I made for the Bentley Robo-Raptors' robot at Kettering University during a summer
+              camp. The robot was typically able to, when using sensors, get to within 2 inches of accuracy
+              distance-wise and 1 degree
+              of accuracy angle-wise. The camp had a competition for the robots to see who could get the most points
+              in different ways
+              (e.g., scoring a ball into a hole) and this program won with a score of more than double the score of
+              the second place
+              winner.</p>
+          </div>
+          <div>
+            <a href='https://github.com/RobbieGM/autonomous-camp' target='_blank' class='chip'>
+              <img src='./icons/github.svg' alt='GitHub' />GitHub
+            </a>
+          </div>
+        </div>
+        <div class='project'>
+          <div>
+            <h4>Participate</h4>
+            <p>This frontend-only project solves a real-world classroom problem: teachers often give students
+              participation points when they contribute something to the class. However, they currently keep track of
+              participation on paper, which is wasteful and inconvenient. Enter Participate, the student
+              participation tracker. Once teachers have entered their students' names into the program, it will tell
+              them how many participation points everyone has gotten, and puts students who haven't been called on
+              recently at the top of the list.</p>
+          </div>
+          <div>
+            <a href='https://participate.netlify.com' target='_blank' class='chip'>
+              <img src='./icons/link.svg' alt='Deployed' />Deployed
+            </a>
+          </div>
+        </div>
+        <div class='project'>
+          <div>
+            <h4>Examlet</h4>
+            <p>Examlet allows students and teachers from the same G Suite domain to create and take exams. Students
+              add the teachers that they need to take exams from, and teachers create exams and can view students'
+              results. Exams are all graded automatically and feature cheating detection by showing teachers when
+              students have been switching tabs or apps. Unfortunately, I never got around to finishing the exam
+              statistics part of the webpage and so I left it as what I considered a minimum viable product.</p>
+          </div>
+          <div>
+            <a href='https://github.com/RobbieGM/examlet' target='_blank' class='chip'>
+              <img src='./icons/github.svg' alt='GitHub' />GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='experience'>
+      <h2>Experience</h2>
+      <div>
+        <h3>Lead programmer at Chelsea Robotics</h3>
+        <ul>
+          <li>Program the robot to drive autonomously
+            <ul>
+              <li>In the 2016 (middle school) and 2018 seasons and this included computer vision</li>
+              <li>The robot uses PID controllers and sensors to keep itself on course</li>
+            </ul>
+          </li>
+          <li>Manage git branches</li>
+          <li>Onboard and teach new programmers</li>
+          <li>Communicate with other parts of the team about project requirements and our requirements for the
+            hardware of the robot</li>
+          <li>Deploy new computer systems donated by the school for the new Chelsea Robotics Center</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Programmer for Chelsea High School</h3>
+        <ul>
+          <li>Made a page containing Google Forms for signing into and out of the counseling office. This was used on
+            a school iPad as a kiosk by the counseling office.</li>
+          <li>Made a widget with help from a programmer from my robotics team that is essentially an interactive
+            manifestation of their <a href='https://www.chelsea.k12.mi.us/about-us/mission-vision'
+              target='_blank'>Portrait of a Graduate</a>. It contains clickable parts of the image which scroll to
+            different parts of a PDF they provided us. Their goal was to create something similar to the <a
+              href='https://www.salineschools.org/sas-vision/sas-compass/' target='_blank'>Saline Portrait of a
+              Graduate widget</a>.</li>
+        </ul>
+      </div>
+    </div>
+    <div id='education'>
+      <h2>Education</h2>
+      <p>Currently I am a student at Chelsea High School, and I will graduate in 2021. I have a 4.0 unweighted GPA and
+        took AP computer science in May 2019, receiving a 5 on the exam. I haven't decided which college I will
+        continue my education at, but I am mainly looking at <a href='https://www.kettering.edu/'
+          target='_blank'>Kettering</a> and <a href='https://umich.edu/' target='_blank'>University of Michigan</a>.
+      </p>
+      </p>
+    </div>
+  </div>
+</body>
 
 </html>
