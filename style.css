@@ -1,68 +1,37 @@
-:root {
-  --light-gray: #f5f5f5;
-  --gray: #e4e4e4;
-  --accent-dark: #00b6b3;
-  --sans: 'Lexend Deca', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 html,
 body {
   margin: 0;
-  color: rgba(0, 0, 0, 0.8);
-  font-family: var(--sans);
-}
-
-* {
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Roboto Mono', Consolas, 'Courier New', Courier, monospace;
-}
-
-a {
-  /* color: var(--accent-dark); */
-  color: #00b6b3;
-  text-decoration: none;
-}
-
-a:hover,
-a:active {
-  text-decoration: underline;
+  --accent: #e90029;
+  /* width: 8.5in; */
+  /* height: 11in; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #profile-and-contact-info {
   display: flex;
-  flex-wrap: wrap;
   /* background: var(--light-gray); */
   background: #f5f5f5;
-  padding: 20px;
+  gap: 8px;
+  border-top: 3px solid var(--accent);
+  padding-inline: calc(24px + 50vw - 4.25in);
+  padding-block: 24px;
 }
 
 #profile-and-contact-info h3 {
   margin-top: 0;
 }
 
-#profile-and-contact-info > * {
-  margin: 20px;
-  flex-basis: 400px;
-}
-
 #profile {
-  flex-grow: 2;
+  flex: 1;
 }
 
-#profile p {
+#profile-and-contact-info p {
   margin-bottom: 0;
 }
 
 #contact-info {
-  flex-grow: 1;
+  flex: 1;
 }
 
 .chip {
@@ -70,47 +39,57 @@ a:active {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  /* background: var(--gray); */
   background: #e4e4e4;
-  padding: 5px 10px;
-  margin: 0 10px 10px 0;
-  font-family: var(--sans);
-  font-weight: normal;
+  padding: 4px 8px;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
 }
 
 .chip img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  opacity: 0.6;
 }
 
 #other-content {
-  margin: 0 auto;
-  padding: 10px;
-  max-width: 1000px;
-  text-align: center;
+  margin: 24px auto;
+  width: calc(8.5in - 48px);
 }
 
-#skill-icon-container {
-  display: grid;
-  grid-template-columns: repeat(6, 80px);
-  grid-auto-rows: 1fr;
-  justify-items: center;
-  justify-content: center;
-  gap: 30px;
-  grid-gap: 30px;
+.reference {
+  float: right;
 }
 
-@media screen and (max-width: 700px) {
-  #skill-icon-container {
-    grid-template-columns: repeat(auto-fit, 80px);
-  }
+.reference a {
+  color: var(--accent);
 }
 
-#skills img {
-  max-width: 80px;
-  height: 80px;
-  /* works as long as no image is wider than it is tall */
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  margin-block: 0.5rem;
+}
+
+ul ul {
+  margin-block: 0;
+}
+
+h2 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+}
+
+h3:first-of-type {
+  margin-top: 0;
 }
 
 #projects {
@@ -120,12 +99,6 @@ a:active {
 #project-container {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media print {
-  #project-container {
-    display: block;
-  }
 }
 
 .project {
@@ -155,12 +128,4 @@ a:active {
 
 .project .chip {
   margin-bottom: 0;
-}
-
-#experience :not(h2) {
-  text-align: left;
-}
-
-#experience {
-  page-break-before: always;
 }
