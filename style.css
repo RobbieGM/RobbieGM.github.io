@@ -1,5 +1,5 @@
 :root {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 html,
@@ -34,6 +34,10 @@ a {
   flex: 1;
 }
 
+#contact {
+  margin-block: 8px;
+}
+
 #contact-info {
   flex: 1;
 }
@@ -44,7 +48,7 @@ a {
   align-items: center;
   border-radius: 999px;
   background: #e4e4e4;
-  padding: 4px 8px;
+  padding: 4px 7px;
   font-size: 0.875rem;
 }
 
@@ -69,17 +73,34 @@ h1,
 h2,
 h3,
 h4 {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
-.deemphasize {
-  color: #505050;
-  font-weight: normal;
+#relevant-coursework {
+  columns: 2;
+}
+
+.quad {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.quad span:first-child {
+  font-weight: bold;
+}
+
+.quad span:nth-child(even) {
+  text-align: right;
+}
+
+.quad span:nth-child(2) ~ span {
+  font-size: 0.875rem;
 }
 
 ul {
-  margin-block: 0.5rem;
+  margin-block-end: 0.5rem;
+  margin-block-start: 0.25rem;
 }
 
 ul ul {
@@ -103,6 +124,7 @@ h3:first-of-type {
 }
 
 aside {
+  letter-spacing: initial;
   float: right;
   text-transform: none;
   font-weight: normal;

@@ -15,12 +15,12 @@
   <body>
     <div id="profile-and-contact-info">
       <h1>Robert Moore</h1>
-      <p>
+      <!--p>
         I fell in love with programming
         <span id="years-experience">8</span> years ago, and have been aiming to
         make maintainable, user-friendly software ever since. Much of my
         experience is in web development but I'm interested in branching out.
-      </p>
+      </p-->
       <p id="contact">
         <a class="chip" href="mailto:rgm020103@gmail.com" target="_blank"
           ><img src="icons/mail.svg" alt="Email" />rgm020103@gmail.com</a
@@ -42,20 +42,21 @@
     <div id="other-content">
       <div id="education">
         <h2>Education</h2>
-        <h3>
-          University of Michigan
-          <span class="deemphasize">College of Engineering</span>
-        </h3>
+        <div class="quad">
+          <span>University of Michigan</span>
+          <span>Ann Arbor, MI</span>
+          <span>B.S. in Computer Science</span>
+          <span>Expected May 2025</span>
+        </div>
         <ul>
-          <li>B.S. Computer Science, 2025</li>
           <li>3.8/4.0 GPA</li>
           <li>
             Relevant coursework:
-            <ul>
-              <li>Data Structures & Algorithms (EECS 281)</li>
-              <li>Probabilistic Methods in Engineering (EECS 301)</li>
-              <li>Programming & Intro to Data Structures (EECS 280)</li>
-              <li>Computational Linear Algebra (ROB 101)</li>
+            <ul id="relevant-coursework">
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Intro to Machine Learning</li>
+              <li>Advanced Technical Communication for CS</li>
+              <li>Web Systems</li>
             </ul>
           </li>
         </ul>
@@ -63,80 +64,104 @@
       <div id="experience">
         <h2>Experience</h2>
         <div>
-          <h3>
-            Intern Frontend Developer for Domino&rsquo;s Pizza
-            <span class="deemphasize">(Ann Arbor, MI, 2022)</span>
-          </h3>
+          <div class="quad">
+            <span>Domino&rsquo;s Pizza</span>
+            <span>Summer 2023</span>
+            <span>Intern Backend Java Developer</span>
+            <span> </span>
+          </div>
+          <ul>
+            <li>Maintained a number of Domino's backend microservices</li>
+            <li>
+              Integrated a new machine learning system for pizza carryout ready
+              time prediction
+            </li>
+            <li>Worked with QA team to fix bugs and update/deploy services</li>
+            <li>
+              Performance-tested critical services to measure reliability in a
+              real-world scenario
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="quad">
+            <span>Domino&rsquo;s Pizza</span>
+            <span>Summer 2022</span>
+            <span>Intern Frontend Developer</span>
+            <span> </span>
+          </div>
           <ul>
             <li>
-              Tested the impact of different software frameworks on the pizza
-              tracker's maintainability and loading speed
+              Tested impact of different software frameworks on pizza tracker's
+              maintainability and loading speed by recreating the pizza tracker
+              in each one
             </li>
             <li>
               Analyzed website performance and eliminated unnecessary
               JavaScript, saving 130kB (~20%)
             </li>
             <li>
-              Implemented UI for a new rewards program to drive revenue growth
+              Implemented UI for new rewards program to drive revenue growth
             </li>
           </ul>
         </div>
         <div>
-          <h3>
-            Freelance Web Developer for Fit Society
-            <span class="deemphasize">(Chelsea, MI, 2019-2021)</span>
-          </h3>
+          <div class="quad">
+            <span>FitSociety</span>
+            <span>2019-2021</span>
+            <span>Freelance Web Developer</span>
+            <span> </span>
+          </div>
           <ul>
             <li>
               Designed and developed a full-stack e-commerce web application
-              from the ground up
             </li>
             <li>
               Communicated with the client to get project requirements, get
-              feedback, and periodically report where the project is at
+              feedback, and periodically report status
             </li>
           </ul>
         </div>
         <div>
-          <h3>
-            Programmer at Chelsea FIRST Robotics
-            <span class="deemphasize">(Chelsea, MI, 2016-2020)</span>
-          </h3>
+          <div class="quad">
+            <span>Chelsea FIRST Robotics</span>
+            <span>2016-2021</span>
+            <span>Programmer</span>
+            <span> </span>
+          </div>
           <ul>
             <li>
-              Programmed the robot to drive autonomously for each annual
-              FIRST-determined challenge, including various sensors and
-              algorithms depending on the year
-            </li>
-            <li>
-              Our team twice won the Control Award, given for outstanding use of
-              programming to control the robot
+              Programmed robot to drive autonomously for each annual
+              FIRST-determined challenge, making use of various sensors and
+              algorithms to twice win the FIRST Control Award given for
+              outstanding use of programming to control the robot
             </li>
             <li>
               Managed git branches and coordinated the tasks of a small team of
-              programmers
+              programmers through daily check-ins
             </li>
             <li>
-              Onboarded and taught three new programmers the basics of
-              programming for the robot with Java and WPILib
+              Taught three new programmers basics of programming for the robot
+              with Java and WPILib
             </li>
             <li>
-              Communicated with the hardware team about software requirements to
-              get software built quickly
+              Communicated with hardware team about software requirements to
+              ensure accurate, efficient software development
             </li>
           </ul>
         </div>
       </div>
       <div id="skills">
         <h2>Skills</h2>
-        <p>C++, Java, Git, HTML, CSS, JavaScript, TypeScript, React</p>
+        <p>C++, Java, Git, TypeScript, React, HTML, CSS, JavaScript</p>
       </div>
       <div id="projects">
         <h2>
           Projects
-          <aside>(all except &ldquo;ENGR 100 Synthesizer&rdquo; were for my own
-            learning)</span
-          >
+          <aside>
+            (all except &ldquo;ENGR 100 Synthesizer&rdquo; are personal
+            projects)
+          </aside>
         </h2>
         <ul>
           <li>
@@ -145,14 +170,14 @@
               >demo</a
             >) &mdash; generates or completes chord progressions based on
             existing music using machine learning, allowing for organization by
-            style or mood.
+            style or mood
           </li>
           <li>
             <a href="https://github.com/RobbieGM/ginger">Ginger</a> (<a
               href="https://ginger-robbiegm.vercel.app/"
               >demo</a
             >) &mdash; A simple offline-capable recipe manager and platform
-            built with React, Redux, GraphQL, and TypeScript.
+            built with React, Redux, GraphQL, and TypeScript
           </li>
           <li>
             ENGR 100 Synthesizer (<a
@@ -160,7 +185,7 @@
               >report</a
             >) - A synthesizer and transcriber program with 6 sampled
             instruments, 5 effects, and the ability to transcribe & replay
-            monophonic tunes.
+            monophonic tunes
           </li>
           <li>
             <a href="https://github.com/RobbieGM/bukkit-magic-plugin"
@@ -168,7 +193,7 @@
             >
             &mdash; A server-side plugin written in Java using the Bukkit
             library to add magical items and facilitate competitive gameplay to
-            Minecraft Java Edition.
+            Minecraft Java Edition
           </li>
           <li>
             Participate (<a href="https://participate.netlify.app/">demo</a>)
