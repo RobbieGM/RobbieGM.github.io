@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robbie Moore WolverineSoft Log</title>
+    <link rel="stylesheet" href="./awsm.min.css" />
+  </head>
+  <body>
+    <header>
+      <h1>WolverineSoft Log</h1>
+      <p>Robbie Moore</p>
+    </header>
+    <main>
+      <h1>Week 1: Victory, Defeat, Heal, Town Capture, Selection</h1>
+      <h2>Victory and Defeat</h2>
+      <p>For a game themed around Thai cats, I didn't initially like the idea of using a fanfare for the victory sound effect. After all, brass instruments are more Western aren't they? But I couldn't really find a way to make it work. I experimented with making Balinese gamelan samples the center of the sound effect, but it really didn't scream "victory" to me. I thought wind instruments would be too weak as well, at least if I used them exclusively. So, after an hour or two of experimentation, I did eventually come around to using trumpets and trombones. Looking for inspiration, I found the <a href="https://www.youtube.com/watch?v=TqaV6oC6MgU">Clash Royale fanfares</a> played at the beginning of the game. I made my victory fanfare rather similar to the one used for the Clash Royale legendary arena, but made it longer, added more brass instruments, and added a crystal flute and gamelan to fit the theme of the game better. The final product sounds like this:</p>
+      <audio controls>
+        <source src="audio/game-win.mp3" />
+      </audio>
+      <p>Initially my plan was to make the defeat sound just like the victory sound, but in a minor key, or descending, or something like that. After sketching this out, I quickly realized it wasn't going to work. The flute sounded too carefree and victorious. The (high-pitched) trumpets, even playing a descending figure, didn't feel like defeat. The timpani worked though, so I at least kept that. I found that low brass worked pretty well, so I sketched out a dark chord in trombones and that alone seemed like enough. I added some strings, too.</p>
+      <audio controls>
+        <source src="audio/game-lose.mp3" />
+      </audio>
+      <p>When I see how this sounds in game, I may change it later. One idea I might use in the future is to have a dramatic sound effect when your commander is killed that plays before this one.</p>
+      <h2>Healing</h2>
+      <p>This one required some research. I didn't really remember what healing is even supposed to sound like. Among the ideas I came across, most were some mixture of ascending musical figures, ascending sound effects, angelic voices, and shimmery high frequency stuff. One which I really liked was <a href="https://youtu.be/xHbSUf1aKB4?si=O8wcFOdmRTHfPcMV&t=98">this</a>, but it sounded really difficult to recreate and was probably a little over-the-top within the context of the game anyway. I started by laying down an ascending arpeggio on the harp over a C dominant 7th chord. It's still the most prominent element in the sound effect. After much experimentation, I also added a convolution reverb with a mark tree as the sample in order to add high frequency content, then added a flanger effect on top of that to make a digital low-to-high frequency sweep effect. I also layered in a couple of random sound effects from my library such as a woosh and bowed metal sound.</p>
+      <audio controls>
+        <source src="audio/heal.mp3" />
+      </audio>
+      <h2>Town Capture</h2>
+      <p>I started by asking my audio team for help on this on Discord. Some suggestions included cheering, fighting, wooden crashing noises, or a fanfare or chime. I was unable to find good samples for the first three options on freesound.org, and editing audio for (non-musical) sound effects is not my strong suit. So, I chose to combine a chime and a fanfare. The resulting sound effect should get the user's attention but doesn't overstay its welcome for what amounts to a pretty minor event in the game. I noticed it could also work as an upgrade sound.</p>
+      <audio controls>
+        <source src="audio/town-capture.mp3" />
+      </audio>
+      <h2>Tile Selection</h2>
+      <p>I figured a simple wooden click would do here. I was tasked with making both a tile selection sound and a town selection sound, so I just pitched the latter up a bit using a frequency shifter.</p>
+      <audio controls>
+        <source src="audio/select-tile.mp3" />
+      </audio>
+      <audio controls>
+        <source src="audio/select-town.mp3" />
+      </audio>
+      <h2>Meetings</h2>
+      <p>I spent about 3 hours in the first WolverineSoft meeting of this two-week span. We talked a lot about the theme of the game and how we would execute it. We also discussed issues with having multiple people collaborating on a single soundtrack: differences of style and software may reduce cohesion of the soundtrack. We all shared which sound effects we worked on and discussed what was covered in our respective squad meetings, assigning tasks to each person for the week. Most importantly, we made a tentative plan for how the soundtrack would work during general gameplay: we decided on having three similar but different tracks, one to play during the turn of each champion. We would give one person the job of sketching out a base track, and some other people the champion-specific additions. I did not make it to the second meeting of the week, unfortunately, but I also spent a fair amount of time on Discord posting my audio snippets, asking for help, and providing feedback on others' work. I estimate this totaled around an hour.</p>
+      <h2>Time Commitment Breakdown</h2>
+      <ul>
+        <li>Victory and defeat sounds: 3 hours</li>
+        <li>Town capture sound: 1 hour</li>
+        <li>Healing sound: 2 hours</li>
+        <li>Tile selection sounds: 0.5 hours</li>
+        <li>WolverineSoft meetings and Discord communication: 4 hours</li>
+        <li>Blog post writing: 1.5 hours</li>
+      </ul>
+    </main>
+  </body>
+</html>

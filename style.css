@@ -1,5 +1,5 @@
 :root {
-  font-size: 0.95rem;
+  font-size: 10pt;
 }
 
 html,
@@ -19,7 +19,7 @@ a {
 
 #profile-and-contact-info {
   border-top: 3px solid var(--accent);
-  padding-inline: calc(24px + 50vw - 4.25in);
+  /* padding-inline: calc(24px + 50vw - 4.25in); */
   padding-block-start: 24px;
   text-align: center;
 }
@@ -35,11 +35,15 @@ a {
 }
 
 #contact {
-  margin-block: 8px;
+  margin-block: 4px;
 }
 
 #contact-info {
   flex: 1;
+}
+
+p {
+  margin-block: 0;
 }
 
 .chip {
