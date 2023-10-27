@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project 2 (Robbie Moore)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Project 2</h1>
+    <h2>Algorithm</h2>
+    <pre>
+state = follow_wall
+setpoint = 0.3 meters
+while state != stop
+  angle_to_goal = atan2(goal_y - y, goal_x - x) - theta
+  min_dist_in_goal_dir = ranges[findMinDistInSlice(ranges, thetas, angle_to_goal, pi * 1/3)]
+  if state == drive_to_goal
+    theta_err = wrapAngle(goal_theta - theta)
+    vel = kP_displacement * rotation_matrix_for(theta) * [x_err, y_err]
+    vel *= min(1, 1 / mag(vel))
+    if (mag(vel) &gt; 0.45) vel *= 0.45 / mag(vel);
+    robot.drive(vel.x, vel.y, theta_err * kP_theta)
+    if x, y, theta are all close to target values
+      state = stop
+    if min_dist_in_goal_dir &lt; setpoint
+      state = follow_wall
+  if state == follow_wall
+    dist_error = setpoint - dist_to_wall
+    movement_along_wall = 0.3 
+    movement_toward_wall = clamp(dist_error * kP_displacement, -0.5, 0.5)
+    vel = rotation_matrix_for(theta) * [movement_toward_wall, movement_along_wall]
+    robot.drive(vel.x, vel.y, 0)
+    if min_dist_in_goal_dir &gt; setpoint * 1.3 
+      state = drive_to_goal
+stop
+    </pre>
+    <p>
+      The algorithm switches from drive to goal mode to follow wall mode when there is an obstacle within the setpoint distance in roughly the same direction as the goal. It switches back into drive to goal (DTG) mode when there is no obstacle within a slightly larger threshold than that setpoint distance (to avoid switching inappropriately back to DTG mode). In the DTG state, it will switch to the stop state if it is sufficiently close to the target and oriented correctly. When driving to the goal, the robot calculates its error in x, y, and theta and uses P control to correct this error. It also uses a rotation matrix to drive in the right direction when rotated. Its velocity is limited to 0.45. In the FW (follow wall) state, the robot moves a fixed velocity in the direction along the wall and also moves toward or away from the wall in proportion with its error relative to the setpoint.
+    </p>
+    <h2>Discussion</h2>
+    <p>The pose from the odometry was sometimes accurate, but after enough moving around enough it could accumulate a lot of error. I observed that the longer the robot had been moving, and the more jittery its movement, the less accurate the odometry reading was. The algorithm used is simple and does not work in all cases. For example, the robot is unable to enter a walled-off space. This is to be expected, but it is also unable to enter a space like the one below (Figure 1). The robot's wall follower algorithm could be improved by implementing Bug 1, i.e. circumnavigating each obstacle and continuing to the goal after reaching the point on the obstacle closest to the goal. It could also be improved by using SLAM, something we'll (sort of) do in the next project.</p>
+    <figure>
+      <img src="./p2-failure.png" height="400" />
+      <figcaption><strong>Figure 1.</strong> If the robot's wall follower algorithm chose to go right instead of left, this would be fine. But then, it would fail in the case where the spiral goes the other way.</figcaption>
+    </figure>
+    <h2>Video</h2>
+    <video controls width="500">
+      <source src="./p2.mp4" type="video/mp4" />
+    </video>
+  </body>
+</html>
