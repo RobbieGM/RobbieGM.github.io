@@ -2,175 +2,134 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=816, user-scalable=yes" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lexend+Deca|Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./style.css" rel="stylesheet" />
-    <script src="main.js" defer></script>
-    <title>Robert Moore: résumé</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <link href="./portfolio.css" rel="stylesheet" />
+    <title>Robbie Moore</title>
   </head>
 
   <body>
-    <div id="profile-and-contact-info">
-      <h1>Robert Moore</h1>
+    <section id="about">
+      <h1>Hi, I&rsquo;m Robbie</h1>
+      <p>Senior at the University of Michigan and software engineer.<wbr/> I enjoy creating elegant solutions to challenging technical problems.</p>
       <p id="contact">
         <a href="mailto:robbiegm@umich.edu" target="_blank">robbiegm@umich.edu</a> &bull;
         <a href="https://github.com/RobbieGM" target="_blank">github.com/RobbieGM</a> &bull;
         <a href="https://linkedin.com/in/robbiegmoore/" target="_blank">linkedin.com/in/robbiegmoore</a>
       </p>
-    </div>
-    <div id="other-content">
-      <div id="education">
-        <h2>Education</h2>
-        <div class="quad">
-          <span>University of Michigan</span>
-          <span>Expected May 2025</span>
-          <span>B.S. in Computer Science</span>
-          <span>Ann Arbor, MI</span>
-        </div>
-        <ul>
-          <li>3.8/4.0 GPA</li>
-          <li>
-            Relevant coursework: Advanced Technical Communication for CS, Web Systems, Intro to Machine Learning, Data Structures &amp; Algorithms, Intro to Computer Organization
-          </li>
-        </ul>
-      </div>
-      <div id="experience">
-        <h2>Experience</h2>
-        <div>
-          <div class="quad">
-            <span>Domino&rsquo;s Pizza</span>
-            <span>Summer 2023</span>
-            <span>Intern Backend Java Developer</span>
-            <span>
-            </span>
-          </div>
-          <ul>
-            <li>
-              Maintained over 15 Domino's backend microservices with a team of
-              developers using Java and Maven, ensuring they were up to date and met 
-              business needs
-            </li>
-            <li>
-              Integrated new machine learning system by developing REST API
-              for pizza carryout ready time prediction
-            </li>
-            <li>
-              Facilitated QA team work by deploying microservices to various environments with Jenkins, fixing any bugs found
-            </li>
-            <li>
-              Performance-tested critical microservices with Gatling to ensure reliability in a
-              real-world scenario
-            </li>
-          </ul>
-        </div>
-        <div>
-          <div class="quad">
-            <span>Domino&rsquo;s Pizza</span>
-            <span>Summer 2022</span>
-            <span>Intern Frontend Developer</span>
-            <span>
-            </span>
-          </div>
-          <ul>
-            <li>
-              Tested impact of different frontend frameworks on pizza tracker's
-              maintainability and loading speed by recreating pizza tracker
-              in each one, culminating in a presentation &amp; recommendation
-              to boss
-            </li>
-            <li>
-              Analyzed website performance and eliminated unnecessary
-              JavaScript, saving 130kB (~20%)
-            </li>
-            <li>
-              Implemented UI for new rewards program to drive revenue growth,
-              pair programming with more experienced team member
-            </li>
-          </ul>
-        </div>
-        <div>
-          <div class="quad">
-            <span>FitSociety</span>
-            <span>2019-2021</span>
-            <span>Freelance Web Developer</span>
-            <span>
-            </span>
-          </div>
-          <ul>
-            <li>
-              Designed and developed a full-stack e-commerce web application from scratch, deploying it to Microsoft Azure
-            </li>
-            <li>
-              Communicated with client to get project requirements, get
-              feedback, and periodically report status
-            </li>
-            <li>Explained high-level technical details of system to reconcile vision with current product implementation</li>
-            <li>Prioritized tasks with Jira, ensuring client would always have something to test and give feedback on</li>
-          </ul>
-        </div>
-      </div>
-      <div id="skills">
-        <h2>Skills</h2>
-        <p>JavaScript, TypeScript, Java, C++, Python, React, Next.js, HTML, CSS, SQL (PostgreSQL), Git, C</p>
-      </div>
-      <div id="projects">
-        <h2>
-          Projects
-          <aside>
-            <a href="https://github.com/RobbieGM">See more</a>
-          </aside>
-        </h2>
-        <ul>
-          <li>
-            EECS 485 review sentiment analyzer &mdash; Distinguishes between
-            positive, negative, and neutral IMDB reviews using a support vector
-            machine. This project challenged me to learn common ML techniques
-            as well as research or invent my own NLP techniques.
-          </li>
-          <li>
-            <a href="https://github.com/RobbieGM/cadence">Cadence</a> (<a
-              href="https://cadence-robbiegm.vercel.app/"
-              >demo</a
-            >) &mdash; Generates or completes chord progressions based on
-            existing music using ML, allowing for organization by
-            style or mood. Detailed attention given to making it feel like
-            a proper desktop application complete with drag-and-drop, keyboard
-            shortcuts, offline functionality (PWA), etc.
-          </li>
-          <li>
-            <a href="https://github.com/RobbieGM/ginger">Ginger</a> (<a
-              href="https://ginger-robbiegm.vercel.app/"
-              >demo</a
-            >) &mdash; A simple offline-first recipe manager and platform
-            capable of sharing, searching, and saving recipes. Built with React,
-            Redux, GraphQL, and TypeScript, with the intention of learning front-end 
-            testing.
-          </li>
-          <li>
-            ENGR 100 Synthesizer (<a
-              href="https://docs.google.com/document/d/1LmbpOHtSfspCge2jK6Wc6_etPQ7MEWs4A67vdp8HnHM/edit"
-              >report</a
-            >) - A synthesizer and transcriber program with 6 sampled
-            instruments, 5 effects, and the ability to transcribe &amp; replay
-            monophonic tunes.
-          </li>
-          <li>
-            <a href="https://github.com/RobbieGM/bukkit-magic-plugin"
-              >Bukkit Magic Plugin</a
-            >
-            &mdash; A server-side plugin written in Java using the Bukkit
-            library to add magical items and facilitate competitive gameplay for 
-            Minecraft Java Edition
-          </li>
-          <li>
-            <a href="https://github.com/RobbieGM/bitterbird">BitterBird</a>
-            &mdash; A tool which analyzes a Twitter user's tweet frequency, popularity, most mentioned people and hashtags, and average sentiment. Built with Express, Vue, and TypeScript.
-          </li>
-        </ul>
-      </div>
-    </div>
+    </section>
+    <section id="projects">
+      <h2>Project Write-Ups</h2>
+      <ul>
+        <li>
+          <img src="/images/uv.png" />
+          <h3><a href="/projects/sveddy.html">Project Details: Sveddy</a></h3>
+          <p>A PostgreSQL extension implementing a collaborative filtering recommendation system, making item recommendation as easy for developers as <code>CREATE EXTENSION</code>. Supports continuous learning, and performs similarly to top performing entries in the Netflix prize dataset.</p>
+          <p><a href="https://github.com/RobbieGM/sveddy">GitHub</a></p>
+        </li>
+        <li>
+          <img src="/images/cadence.png" />
+          <h3><a href="/projects/cadence.html">Project Details: Cadence</a></h3>
+          <p>A web application using ML to generate or complete chord progressions based on existing music, including features like drag-and-drop and offline functionality.</p>
+          <p><a href="https://github.com/RobbieGM/cadence">GitHub</a> &bull; <a href="https://cadence-robbiegm.vercel.app/">Demo</a></p>
+        </li>
+        <!-- <li> -->
+        <!--   <img src="/images/ginger.png" /> -->
+        <!--   <h3><a href="/projects/ginger.html">Project Details: Ginger</a></h3> -->
+        <!--   <p>An offline-first recipe manager and platform that allows users to share, find, and save recipes.</p> -->
+        <!--   <p><a href="https://github.com/RobbieGM/ginger">GitHub</a> &bull; <a href="https://ginger-robbiegm.vercel.app/">Demo</a></p> -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!--   <h3><a href="projects/mapreduce.html">Project Details: MapReduce</a></h3> -->
+        <!--   <p>Developed a fault-tolerant, distributed system in Python for performing MapReduce tasks, utilizing both TCP and UDP for network communication.</p> -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!--   <h3><a href="projects/file-server.html">Project Details: File Server</a></h3> -->
+        <!--   <p>Built a concurrent file server in C++ with a custom network protocol, supporting CRUD operations and efficiently managing file and directory inodes.</p> -->
+        <!-- </li> -->
+        <li>
+          <img src="/images/search-engine.png" />
+          <h3><a href="/projects/search-engine.html">Project Details: Ask485</a></h3>
+          <p>A Python search engine using TF-IDF and PageRank to return relevant search results, utilizing a MapReduce pipeline for data processing. An assignment from EECS 445.</p>
+          <p><a href="https://eecs485staff.github.io/p5-search-engine/">Project spec</a></p>
+        </li>
+        <li>
+          <img src="/images/snthszr.png" />
+          <h3><a href="https://docs.google.com/document/d/1LmbpOHtSfspCge2jK6Wc6_etPQ7MEWs4A67vdp8HnHM/view">Project Details: Synthesizer</a></h3>
+          <p>A synthesizer and transcriber program with 6 sampled instruments, 5 effects, and the ability to transcribe & replay monophonic tunes. An assignment from ENGR 100.</p>
+          <p></p>
+        </li>
+        <!-- <li> -->
+        <!--   <h3><a href="projects/sillyql.html">Project Details: SillyQL</a></h3> -->
+        <!--   <p>Engineered an in-memory database with an SQL-like interface, supporting complex queries with BST and hash indices for optimized performance.</p> -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!--   <h3><a href="projects/bitterbird.html">Project Details: BitterBird</a></h3> -->
+        <!--   <p>Created a backend system using Express to analyze Twitter data, incorporating data analytics and sentiment analysis with Vue.js frontend integration.</p> -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!--   <h3><a href="projects/thread-library.html">Project Details: Thread Library</a></h3> -->
+        <!--   <p>Developed a C++ library for multithreading primitives using low-level CPU operations, highlighting skills in threading and synchronization.</p> -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!--   <h3><a href="projects/virtual-memory-pager.html">Project Details: Virtual Memory Pager</a></h3> -->
+        <!--   <p>Implemented a toy virtual memory pager in C++ with support for file-backed and swap-backed pages, using the clock algorithm for page eviction.</p> -->
+        <!-- </li> -->
+      </ul>
+    </section>
+    <!-- <div id="projects"> -->
+    <!--   <h2> -->
+    <!--     Projects -->
+    <!--     <aside> -->
+    <!--       <a href="https://github.com/RobbieGM">See more</a> -->
+    <!--     </aside> -->
+    <!--   </h2> -->
+    <!--   <ul> -->
+    <!--     <li> -->
+    <!--       EECS 485 review sentiment analyzer &mdash; Distinguishes between -->
+    <!--       positive, negative, and neutral IMDB reviews using a support vector -->
+    <!--       machine. This project challenged me to learn common ML techniques -->
+    <!--       as well as research or invent my own NLP techniques. -->
+    <!--     </li> -->
+    <!--     <li> -->
+    <!--       <a href="https://github.com/RobbieGM/cadence">Cadence</a> (<a -->
+    <!--         href="https://cadence-robbiegm.vercel.app/" -->
+    <!--         >demo</a -->
+    <!--       >) &mdash; Generates or completes chord progressions based on -->
+    <!--       existing music using ML, allowing for organization by -->
+    <!--       style or mood. Detailed attention given to making it feel like -->
+    <!--       a proper desktop application complete with drag-and-drop, keyboard -->
+    <!--       shortcuts, offline functionality (PWA), etc. -->
+    <!--     </li> -->
+    <!--     <li> -->
+    <!--       <a href="https://github.com/RobbieGM/ginger">Ginger</a> (<a -->
+    <!--         href="https://ginger-robbiegm.vercel.app/" -->
+    <!--         >demo</a -->
+    <!--       >) &mdash; A simple offline-first recipe manager and platform -->
+    <!--       capable of sharing, searching, and saving recipes. Built with React, -->
+    <!--       Redux, GraphQL, and TypeScript, with the intention of learning front-end  -->
+    <!--       testing. -->
+    <!--     </li> -->
+    <!--     <li> -->
+    <!--       ENGR 100 Synthesizer (<a -->
+    <!--         href="https://docs.google.com/document/d/1LmbpOHtSfspCge2jK6Wc6_etPQ7MEWs4A67vdp8HnHM/edit" -->
+    <!--         >report</a -->
+    <!--       >) - A synthesizer and transcriber program with 6 sampled -->
+    <!--       instruments, 5 effects, and the ability to transcribe &amp; replay -->
+    <!--       monophonic tunes. -->
+    <!--     </li> -->
+    <!--     <li> -->
+    <!--       <a href="https://github.com/RobbieGM/bukkit-magic-plugin" -->
+    <!--         >Bukkit Magic Plugin</a -->
+    <!--       > -->
+    <!--       &mdash; A server-side plugin written in Java using the Bukkit -->
+    <!--       library to add magical items and facilitate competitive gameplay for  -->
+    <!--       Minecraft Java Edition -->
+    <!--     </li> -->
+    <!--     <li> -->
+    <!--       <a href="https://github.com/RobbieGM/bitterbird">BitterBird</a> -->
+    <!--       &mdash; A tool which analyzes a Twitter user's tweet frequency, popularity, most mentioned people and hashtags, and average sentiment. Built with Express, Vue, and TypeScript. -->
+    <!--     </li> -->
+    <!--   </ul> -->
+    <!-- </div> -->
   </body>
 </html>

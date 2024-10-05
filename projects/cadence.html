@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <link href="/portfolio.css" rel="stylesheet" />
+    <title>Cadence - Robbie Moore</title>
+  </head>
+
+  <body class='article'>
+    <a href="/">&larr; Other projects</a>
+    <h1>Cadence</h1>
+    <p>Like many others, I like to make music. One of the ways I get my inspiration is by analyzing my favorite pieces of music - melodically, harmonically, texturally - and trying to glean insight that I can apply to my own work. One major thing to look at when analyzing music is harmony - often specifically in terms of chord progressions. As part of my analysis, I transcribed all the chords for every track of one of my favorite soundtracks, <em>Ori and the Will of the Wisps</em>. While I learned a lot from looking at this data myself, I wondered if a computer could learn from this data too, and maybe generate chord progressions in the style of its training data. This is what Cadence does. But for me, making Cadence wasn't just about plugging data into a model and getting some output - I had already done that with a Markov model with a much simpler script - it was about creating a very polished interface for this functionality that other musicians would actually use. Cadence allows musicians to curate and share training data, create and train models, and be inspired by ML suggestions, all through an interface that I consider some of my best work.</p>
+    <p>Check out the Cadence <a href="https://cadence-robbiegm.vercel.app">demo</a> or <a href="https://github.com/RobbieGM/cadence">source code</a>.</p>
+    <h2>Technology</h2>
+    <p>Cadence uses SolidJS, which is like React but better (aside from the smaller ecosystem). Code is written in TypeScript and CSS, and built with Vite and PostCSS. The TensorFlow.js library is used for ML models.</p>
+    <h2>Highlights</h2>
+    <ul>
+      <li><strong>Fully client-side.</strong> Cadence does not need any server to function. In fact, it works offline in web browsers that support service workers (which is all of them, nowadays).</li>
+      <li><strong>LSTM-powered.</strong> The app uses an LSTM model from Tensorflow. Training is done client-side. I found the results with this were pretty good, better than Markov chains. I haven't tried transformers yet.</li>
+      <li><strong>Bring your own training data.</strong> Cadence does not have a large corpus of diverse training data to start with. Musicians need to transcribe chords from music they find inspiring and input it into Cadence. This may help results stay within the desired style, but it is also a major limitation! Not everyone wants to do this step, even with the input process made as painless as possible. This is why I've made sharing and importing this data as easy as possible, as if a large number of people decide to use Cadence they can all share their transcriptions with each other to create a large public corpus.</li>
+      <li><strong>Designed specially for desktop and mobile.</strong> For desktop users, Cadence supports a few keyboard shortcuts that make it a lot more convenient to use, particularly when inputting a lot of training data. Keyboard accessibility isn't limited to just pressing tab-tab-tab-enter. For mobile users, because typing chord names is extremely inconvenient (particularly with sharps), I made a custom keyboard widget for inputting chords.</li>
+    </ul>
+    <h2>Functionality</h2>
+    <h3>Main Interface</h3>
+    <img src="/images/cadence-main-interface.png" />
+    <p>The main interface shows the list of pieces of music used as training data. Users can save and load these as JSON files, if they want to share them with each other. Files can be dragged and dropped onto the interface. Pressing Ctrl-Enter will activate the dialog form to add a new piece of music, and pressing Ctrl-G allows users to train a new model, or to use one they've trained before.</p>
+    <h3>Music Editor</h3>
+    <img src="/images/cadence-music-editor.png" />
+    <p>This UI is shown when adding or editing a piece of music from the training data collection. The user is asked to input a title, any tags to be used for fine-grained selection of training data later, and a sequence of chords. Most of it is very simple, but what I'd like to highlight here is the chord progression input. When typing, it makes a number of automatic corrections from what's easy to type to what is musically conventional. For example, it corrects lowercase "b" to "♭", "#" to "♯", "halfdim" or "m7b5" to "ø", "dim" to "°". It also checks input validity and places red squiggly lines under invalid chords. When copying or pasting, the editor makes these same corrections and checks, and also ensures that there are no extra or missing spaces between chords. For mobile users, the input method is different. Cadence disables the default UI keyboard for the textarea, and instead allows mobile users to input chords using the interface below the textarea. Clicking a note on the piano keyboard adds a new chord where the cursor is, with its default quality being dependent on the selected key signature. (The key signature selector only exists for this reason and does not affect the training data.) For example, if the user has selected a key signature with no sharps or flats, then if they click C it will be a major chord, D will be minor, E will be minor, F will be major, etc. The backspace button deletes one chord at a time, unless the user has selected a range of chords to delete. Chord qualities can be changed from the default by selecting one in the grid below.</p>
+    <h3>Model Training</h3>
+    <img src="/images/cadence-train-ai-dialog.png" />
+    <p>First the user is given options to select their training data based on tags on individual tracks. This helps them train a model that is useful to the style they are writing in.</p>
+    <img src="/images/cadence-train-ai-dialog-2.png" />
+    <p>The user can also customize the training process in the "AI settings" section. They can choose the number of epochs to train for, the learning rate, the batch size, and the window size. The window size is the number of chords that the model will use to predict the next chord. A longer sequence length may help the model learn more complex patterns, but it may also make training slower and require more data.</p>
+    <p>After clicking "Train AI", the user is shown a progress bar. When training is complete, the user is shown the next dialog which allows them to use and save the model.</p>
+    <h3>Chord Progression Generation</h3>
+    <img src="/images/cadence-generate-chords-dialog.png" />
+    <p>Next, the user may interact with the newly trained model. The model will autocomplete a chord progression from the beginning sequence entered, which is allowed to be empty. They can also adjust the randomization exponent of the model to control whether it is produces output that is predictable and true to the training data or more erratic and creative. Finally, they can save the model if desired.</p>
+    <h2>Challenges</h2>
+    <p>The most difficult part of this whole project was probably the chord progression editor. No other UI element like this exists to my knowledge, so I was on my own in implementation. I had to figure out how to make it maximally intuitive for desktop users who type everything in with their keyboard while still enforcing a style that is machine-parseable, and also as easy as possible for mobile users for whom typing with their default keyboard would be prohibitively slow. The chord progression editor needs to do a lot in the way of continuously validating, formatting, and standardizing user input, all while supporting two entirely different input methods.</p>
+    <p>Additionally, I had never worked with TensorFlow.js before. At the time of creating this, I wasn't too familiar with ML in general either. One major decision I had was on how chords would be represented as vectors; I chose one-hot encoding for the chord root and quality. For the training process, I realized that chord progressions are invariant with respect to key, so I multiplied the amount of training data times 12 with each copy transposed up or down some semitones.</p>
+    <h2>Future Work</h2>
+    <ul>
+      <li>For models interpreting sequential data such as text (or chord progressions in this case), transformers are all the rage these days. It would be worth trying those and comparing the results to LSTM.</li>
+      <li>Instead of requiring the user to use their ear to transcribe chord progressions from music, which is a skill that takes time to learn, a good feature would be automatic transcription of uploaded audio files.</li>
+      <li>Cadence's internal representation of chords for the model could probably be improved. Since there are 12 different possible roots and 12 known chord qualities, both one-hot encoded, the dimensionality of a chord vector is 24. This could be reduced to 12 by instead representing a chord as set of pitch classes which are included within it - for example, C major would be represented as [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] (C, E, G). Not only would this reduce dimensionality, it would allow the model to see directly that chords that share notes are similar. For example, E minor and C major may have different roots and different qualities, but they share 2 notes.
+      <li>Supporting input by MIDI keyboard would be pretty cool.</li>
+    </ul>
+  </body>
+</html>
