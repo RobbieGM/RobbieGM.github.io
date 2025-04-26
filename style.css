@@ -18,7 +18,7 @@ a {
 }
 
 #profile-and-contact-info {
-  border-top: 3px solid var(--accent);
+  /* border-top: 3px solid var(--accent); */
   /* padding-inline: calc(24px + 50vw - 4.25in); */
   padding-block-start: 24px;
   text-align: center;
@@ -46,31 +46,9 @@ p {
   margin-block: 0;
 }
 
-.chip {
-  color: inherit;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  background: #e4e4e4;
-  padding: 4px 7px;
-  font-size: 0.875rem;
-}
-
-.chip img {
-  width: 18px;
-  height: 18px;
-  margin-right: 6px;
-  opacity: 0.6;
-}
-
 #other-content {
   margin: 12px auto;
   width: calc(8.5in - 48px);
-}
-
-.reference {
-  margin-top: 3px;
-  float: right;
 }
 
 h1,
@@ -81,13 +59,9 @@ h4 {
   margin-bottom: 0.25rem;
 }
 
-#relevant-coursework {
-  columns: 2;
-}
-
 .quad {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 3fr 1fr;
 }
 
 .quad span:first-child {
@@ -102,7 +76,8 @@ h4 {
   font-size: 0.875rem;
 }
 
-ul {
+ul,
+.project {
   margin-block-end: 0.5rem;
   margin-block-start: 0.25rem;
 }
@@ -122,11 +97,6 @@ h3:first-of-type {
   margin-top: 0;
 }
 
-#project-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 aside {
   letter-spacing: initial;
   float: right;
@@ -136,31 +106,7 @@ aside {
   font-size: 1rem;
 }
 
-.project {
-  page-break-inside: avoid;
-  position: relative;
-  flex: 1;
-  flex-basis: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  /* background: var(--light-gray); */
-  background: #f5f5f5;
-  margin: 10px;
-  border-radius: 5px;
-  text-align: left;
-  padding: 15px;
-}
-
-.project > div:first-child {
-  flex-grow: 1;
-}
-
-.project h4 {
-  margin-top: 0;
-}
-
-.project .chip {
-  margin-bottom: 0;
+.date-range {
+  color: #0008;
+  display: none;
 }
